@@ -10,7 +10,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import { Box, Button,Grid } from "@mui/material";
+import { Box, Button} from "@mui/material";
 // interface ExpandMoreProps extends IconButtonProps {
 //   expand: boolean;
 // }
@@ -25,7 +25,24 @@ import { Box, Button,Grid } from "@mui/material";
 //     duration: theme.transitions.duration.shortest,
 //   }),
 // }));
-
+    const cardsData=[
+   {imgSRC:'/Apples.webp',name:'Apples',price:200},
+   {imgSRC:'/BabySpinach.webp',name:'BabySpinach',price:100},
+   {imgSRC:"/blueberries.webp",name:'BlueBerries',price:150},
+   {imgSRC:"/BrusselsSprouts.webp",name:'Brussels',price:50},
+   {imgSRC:"/CelerySticks.webp",name:'CelerySticks',price:80},
+   {imgSRC:'/clementines.webp',name:'Clementines',price:110},
+   {imgSRC:'/Corn.webp',name:'Corn',price:200},
+   {imgSRC:'/Cucumber.webp',name:'Cucumber',price:300},
+   {imgSRC:'/Dates.webp',name:'Dates',price:400},
+   {imgSRC:'/Lemon.webp',name:'Lemon',price:120},
+   {imgSRC:'/FrenchGreenBeans.webp',name:'FrenchGreenBeans',price:230},
+   {imgSRC:'/Mangoes.webp',name:'Mango',price:100},
+   {imgSRC:"/MiniPeppers.webp",name:'MiniPeppers',price:60},
+   {imgSRC:'/pears.webp',name:'Pears',price:90},
+   {imgSRC:"/strawberry.webp",name:'Strawberries',price:100},
+   {imgSRC:'/RedCherries.webp',name:"RedCherries",price:150}
+     ];
 export default function ProductCard() {
   const [expanded, setExpanded] = React.useState(false);
 
@@ -34,27 +51,34 @@ export default function ProductCard() {
   };
 
   return (
-    <Box sx={{display:'flex',flexWrap:'wrap' ,justifyContent:'center',alignItmes:'center'}}>
-    <Card sx={{ width: '40%',m:6}}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image="/iphone.jpeg"
-        title="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+    <Box sx={{display:'flex',flexWrap:'wrap',justifyItems:'right',alignItems:'center'}}>
+      {
+       cardsData.map((element)=>{
+        return(
+          <>
+            <Card sx={{ width: '40%',m:6}}>
+              <CardMedia
+                sx={{ height: 140 }}
+                image={element.imgSRC}
+                title="green iguana"
+              />
+              <CardContent>
+                    <Typography variant="h3" color="text.secondary">
+                    {element.price}
+                    </Typography>
+                    <Typography gutterBottom variant="h5" component="div" align="center">
+                      {element.name}
+                    </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Share</Button>
+                <Button size="small">Learn More</Button>
+              </CardActions>
+            </Card>
+          </>
+        )
+       })
+}
     </Box>
   );
 }
