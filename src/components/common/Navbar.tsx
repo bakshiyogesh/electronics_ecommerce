@@ -54,7 +54,7 @@ const NavBar:FC=()=>{
               textDecoration: 'none',
             }}
           >
-            ELECTRONICS
+            VEGIES
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' } }}>
             {pages.map((page) => (

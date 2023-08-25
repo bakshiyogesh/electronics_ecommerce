@@ -5,6 +5,7 @@ import ProductCard from "../components/common/Card";
 import { Grid, Container,} from "@mui/material";
 import ImageSlider from "../components/ImageSlider";
 import ProductContainer from "../components/common/ProductContainer";
+import Footer from "../components/common/Footer";
 // import "./style.css";
 
 
@@ -21,7 +22,7 @@ const HomePage:FC=()=>{
   <ImageSlider/>
   
   <ProductContainer/>
-
+<Footer/>
 
     {/* <div style={{ display: 'flex', flexDirection: 'column', marginTop: '100px' }} >
 
