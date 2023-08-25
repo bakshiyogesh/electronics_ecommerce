@@ -20,7 +20,7 @@ const ProductContainer: FC = () => {
         }}
       /> */}
 
-<Grid container >
+{/* <Grid container >
   <Grid item xs={12}>
   <Box
         sx={{
@@ -35,8 +35,10 @@ const ProductContainer: FC = () => {
         }}
       />
   </Grid>
-</Grid>
+</Grid> */}
+<Grid container sx={{backgroundImage:'/pexels-lukas-1420702.jpeg'}}>
 
+</Grid>
     </>
   );
 };

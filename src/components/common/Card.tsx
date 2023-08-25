@@ -1,15 +1,11 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
-import Collapse from "@mui/material/Collapse";
-import Avatar from "@mui/material/Avatar";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import { red } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -38,7 +34,8 @@ export default function ProductCard() {
   };
 
   return (
-    <Card sx={{ width: '100%', zIndex: 999 }}>
+    <Box sx={{display:'flex',flexWrap:'wrap' ,justifyContent:'center',alignItmes:'center'}}>
+    <Card sx={{ width: '40%',m:6}}>
       <CardMedia
         sx={{ height: 140 }}
         image="/iphone.jpeg"
@@ -58,5 +55,6 @@ export default function ProductCard() {
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
+    </Box>
   );
 }

@@ -1,8 +1,10 @@
 import { FC } from "react";
 import NavBar from "../components/common/Navbar";
-import ProductContainer from "../components/common/ProductContainer";
+// import ProductContainer from "../components/common/ProductContainer";
 import ProductCard from "../components/common/Card";
-import { Grid, Container, Stack } from "@mui/material";
+import { Grid, Container,} from "@mui/material";
+import ImageSlider from "../components/ImageSlider";
+import ProductContainer from "../components/common/ProductContainer";
 // import "./style.css";
 
 
@@ -11,7 +13,14 @@ const HomePage:FC=()=>{
 
  return(
 <>
-    <NavBar/>
+<Grid container xs={12}>
+  
+  <NavBar/>
+  <Container/>
+  <ProductCard />
+  <ImageSlider/>
+  
+  <ProductContainer/>
 
 
     {/* <div style={{ display: 'flex', flexDirection: 'column', marginTop: '100px' }} >
@@ -32,17 +41,7 @@ const HomePage:FC=()=>{
         </p> */
 
         <div style={{ display: 'block' }}>
-            <Grid container spacing={5} >
-                <Grid item xs={4}>
-                    <ProductCard />
-                </Grid>
-                <Grid item xs={4}>
-                    <ProductCard />
-                </Grid>
-                <Grid item xs={4}>
-                    <ProductCard />
-                </Grid>
-            </Grid>
+           
         </div>
 
 
@@ -68,7 +67,7 @@ const HomePage:FC=()=>{
 
 
 
-    
+</Grid>    
 
 </>
  )
