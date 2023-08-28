@@ -14,15 +14,13 @@ const HomePage:FC=()=>{
 
  return(
 <>
-<Grid container xs={12}>
   
   <NavBar/>
-  <Container/>
+  <ProductContainer/>
+  {/* <Container/> */}
   <ProductCard />
   <ImageSlider/>
-  
-  <ProductContainer/>
-<Footer/>
+  <Footer/>
 
     {/* <div style={{ display: 'flex', flexDirection: 'column', marginTop: '100px' }} >
 
@@ -68,7 +66,7 @@ const HomePage:FC=()=>{
 
 
 
-</Grid>    
+{/* </Grid>     */}
 
 </>
  )

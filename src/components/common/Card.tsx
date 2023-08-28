@@ -1,16 +1,9 @@
-import * as React from "react";
-import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
-import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-import { Grid, Button} from "@mui/material";
+import { Grid, Button, Container} from "@mui/material";
 // interface ExpandMoreProps extends IconButtonProps {
 //   expand: boolean;
 // }
@@ -44,14 +37,10 @@ import { Grid, Button} from "@mui/material";
    {imgSRC:'/FrenchGreenBeans.webp',name:'FrenchGreenBeans',price:230}
      ];
 export default function ProductCard() {
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
-
   return (
-    <Grid  container sx={{m:6,placeContent:'right'}} sm={6}>
+    <Container>
+    <Grid container sx={{position:'relative'}}>
+    <Grid  item sx={{m:6,placeContent:'right'}} columns={{ xs: 4, sm: 8, md: 12 }}>
       {
        cardsData.map((element)=>{
         return(
@@ -80,5 +69,7 @@ export default function ProductCard() {
        })
 }
     </Grid>
+    </Grid>
+    </Container>
   );
 }

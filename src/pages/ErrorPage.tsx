@@ -7,8 +7,8 @@ const ErrorPage:FC=()=>{
     return(
         <>
             <NavBar/>
-            <Typography variant="h1" sx={{m:6}}>404 Not Found</Typography>
-        <Footer/>
+            <Typography variant="h1" sx={{m:8}} textAlign={"center"}>404 Not Found</Typography>
+        {/* <Footer/> */}
         </>
     )
 }
