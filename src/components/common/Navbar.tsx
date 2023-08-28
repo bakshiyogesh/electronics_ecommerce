@@ -68,7 +68,7 @@ const NavBar:FC=()=>{
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block',":hover":'#51E1ED'}}
               >
-                <Link to={page.btnLink}>{page.btnName}</Link>
+                <Link to={page.btnLink} color='red'>{page.btnName}</Link>
               </Button>
             ))}
           </Box>

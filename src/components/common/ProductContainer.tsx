@@ -31,6 +31,7 @@ const ProductContainer: FC = () => {
           WebkitBackgroundSize:'cover',
           m:2
         }}
+        component={"section"}
       />
 
         <Container sx={{backgroundImage:imageURL}}>

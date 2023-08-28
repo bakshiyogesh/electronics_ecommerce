@@ -1,12 +1,11 @@
-import { ThemeProvider } from "@emotion/react";
-import { Box, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { FC } from "react";
 
 const Footer:FC=()=>{
-    const Year=new Date
+    const Year=new Date().getFullYear;
     return(
           <>
-           <Box sx={{ bgcolor: 'black', p: 6,width:'100%'}} component="footer">
+           <Grid sx={{ bgcolor: 'black', p: 6,width:'100%'}} component="footer">
                 <Typography variant="h6" align="center" gutterBottom>
                 </Typography>
                 <Typography
@@ -17,7 +16,7 @@ const Footer:FC=()=>{
                 >
                © 2023 Vegetable&Fruits
                 </Typography>
-           </Box>
+           </Grid>
           </>
            )
 }

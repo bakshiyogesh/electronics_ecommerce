@@ -3,21 +3,8 @@ import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Typography from "@mui/material/Typography";
-import { Grid, Button, Container} from "@mui/material";
-// interface ExpandMoreProps extends IconButtonProps {
-//   expand: boolean;
-// }
+import { Grid, Button} from "@mui/material";
 
-// const ExpandMore = styled((props: ExpandMoreProps) => {
-//   const { expand, ...other } = props;
-//   return <IconButton {...other} />;
-// })(({ theme, expand }) => ({
-//   transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-//   marginLeft: 'auto',
-//   transition: theme.transitions.create('transform', {
-//     duration: theme.transitions.duration.shortest,
-//   }),
-// }));
     const cardsData=[
    {imgSRC:'/Apples.webp',name:'Apples',price:200},
    {imgSRC:'/BabySpinach.webp',name:'BabySpinach',price:100},
@@ -38,38 +25,32 @@ import { Grid, Button, Container} from "@mui/material";
      ];
 export default function ProductCard() {
   return (
-    <Container>
-    <Grid container sx={{position:'relative'}}>
-    <Grid  item sx={{m:6,placeContent:'right'}} columns={{ xs: 4, sm: 8, md: 12 }}>
-      {
-       cardsData.map((element)=>{
-        return(
-          <>
-          
-            <Card sx={{m:3,width:'30vw',height:'auto'}}>
-              <CardMedia
-                sx={{ height:"250px"}}
-                image={element.imgSRC}
-                title="green iguana"
-              />
-              <CardContent>
-                    <Typography variant="subtitle2" color="text.secondary">
-                    ₹{element.price}
-                    </Typography>
-                    <Typography variant="subtitle2">
-                      {element.name}
-                    </Typography>
-                    <Button size="small" variant="contained">Add to cart</Button>
-              </CardContent>
-              <CardActions>
-              </CardActions>
-            </Card>
-          </>
-        )
-       })
-}
-    </Grid>
-    </Grid>
-    </Container>
-  );
+
+<Grid container sx={{ gap: 5, mt: 10 }} flexWrap={"wrap"} justifyContent={'center'} component={"section"}>
+        {cardsData.map((item) => {
+          return (
+            <>
+              <Card sx={{ width: "30vw", height: "auto" }}>
+                <CardContent>
+                  <CardMedia
+                    sx={{ height: "200px" }}
+                    image={item.imgSRC}
+                    title="green iguana"
+                  />
+                  <Typography variant="subtitle2" color="text.secondary">
+                    ₹{item.price}
+                     </Typography>
+                     <Typography variant="subtitle2">
+                      {item.name}
+                   </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small">Add to cart</Button>
+                </CardActions>
+              </Card>
+              </>
+        )}
+          )}
+</Grid>
+  )
 }
