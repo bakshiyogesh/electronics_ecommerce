@@ -2,7 +2,7 @@ import { Grid, Typography } from "@mui/material";
 import { FC } from "react";
 
 const Footer:FC=()=>{
-    const Year=new Date().getFullYear;
+    const fullyear=new Date().getFullYear;
     return(
           <>
            <Grid sx={{ bgcolor: 'black', p: 6,width:'100%'}} component="footer">
