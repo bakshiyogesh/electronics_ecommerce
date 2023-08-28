@@ -12,7 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import NavBar from '../components/common/Navbar';
+import NavBar from '../components/common/navbar/Navbar';
 
 function Copyright(props:any) {
 

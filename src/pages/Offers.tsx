@@ -5,7 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import CardMedia from "@mui/material/CardMedia";
 import { Grid } from "@mui/material";
-import NavBar from "../components/common/Navbar";
+import NavBar from "../components/common/navbar/Navbar";
 const offerArray = [
   { imgSRC: "/2off.webp", coupon: "2OFF" },
   {

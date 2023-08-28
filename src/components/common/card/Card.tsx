@@ -26,7 +26,7 @@ import { Grid, Button} from "@mui/material";
 export default function ProductCard() {
   return (
 
-<Grid container sx={{ gap: 5, mt: 10 }} flexWrap={"wrap"} justifyContent={'center'} component={"section"}>
+<Grid container sx={{ gap: 5, mt: 10 }} flexWrap={"wrap"} justifyContent={'center'} component={"div"}>
         {cardsData.map((item) => {
           return (
             <>
