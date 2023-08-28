@@ -15,7 +15,7 @@ const Footer:FC=()=>{
                 color="white"
                 component="p"
                 >
-               ©{} Vegetable&Fruits
+               © 2023 Vegetable&Fruits
                 </Typography>
            </Box>
           </>

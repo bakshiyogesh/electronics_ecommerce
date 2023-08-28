@@ -10,7 +10,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import { Box, Button} from "@mui/material";
+import { Grid, Button} from "@mui/material";
 // interface ExpandMoreProps extends IconButtonProps {
 //   expand: boolean;
 // }
@@ -51,33 +51,34 @@ export default function ProductCard() {
   };
 
   return (
-    <Box sx={{display:'flex',flexWrap:'wrap',m:6,justifyContent:'right'}}>
+    <Grid  container sx={{m:6,placeContent:'right'}} sm={6}>
       {
        cardsData.map((element)=>{
         return(
           <>
-            <Card sx={{m:3,minWidth:'35%'}}>
+          
+            <Card sx={{m:3,width:'30vw',height:'auto'}}>
               <CardMedia
-                sx={{ height: 140 ,width:'100%'}}
+                sx={{ height:"250px"}}
                 image={element.imgSRC}
                 title="green iguana"
               />
               <CardContent>
-                    <Typography variant="h3" color="text.secondary">
+                    <Typography variant="subtitle2" color="text.secondary">
                     ₹{element.price}
                     </Typography>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography variant="subtitle2">
                       {element.name}
                     </Typography>
+                    <Button size="small" variant="contained">Add to cart</Button>
               </CardContent>
               <CardActions>
-                <Button size="small">Add to cart</Button>
               </CardActions>
             </Card>
           </>
         )
        })
 }
-    </Box>
+    </Grid>
   );
 }

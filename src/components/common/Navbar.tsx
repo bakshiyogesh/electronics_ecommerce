@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 const NavBar:FC=()=>{
-    const pages = ['Products','Cart','SignUp'];
+    const pages = ['Home','Products','Cart','SignUp'];
     const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
@@ -61,7 +61,7 @@ const NavBar:FC=()=>{
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block'}}
+                sx={{ my: 2, color: 'white', display: 'block',":hover":'#51E1ED'}}
               >
                 {page}
               </Button>

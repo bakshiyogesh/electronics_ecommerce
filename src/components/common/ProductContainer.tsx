@@ -3,7 +3,7 @@ import Container from "@mui/material/Container";
 import { Box, CardMedia, Paper, Grid } from "@mui/material";
 // import CardMedia from '@mui/material/CardMedia';
 const ProductContainer: FC = () => {
-  const imageURL = "/pexels-lukas-1420702.jpeg";
+  const imageURL = "/public/vecteezy_vegetables-background/vecteezy_vegetables-background-with-text-space_6033469.jpg";
 
   return (
     <>
@@ -36,7 +36,7 @@ const ProductContainer: FC = () => {
       />
   </Grid>
 </Grid> */}
-<Grid container sx={{backgroundImage:'/pexels-lukas-1420702.jpeg'}}>
+<Grid container sx={{backgroundImage:{imageURL}}}>
 
 </Grid>
     </>
