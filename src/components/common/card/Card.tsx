@@ -4,6 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Typography from "@mui/material/Typography";
 import { Grid, Button} from "@mui/material";
+import SideMenuBar from "../../sideMenu/sideMenu";
 
     const cardsData=[
    {imgSRC:'/Apples.webp',name:'Apples',price:200},
@@ -25,8 +26,10 @@ import { Grid, Button} from "@mui/material";
      ];
 export default function ProductCard() {
   return (
-
-<Grid container sx={{ gap: 5, mt: 10 }} flexWrap={"wrap"} justifyContent={'center'} component={"div"}>
+<>
+<Grid container component={'section'}>
+  <SideMenuBar/>
+<Grid container sx={{ gap: 5, mt: 10,width:'70%'}} flexWrap={"wrap"} justifyContent={'flex-end'} component={"section"}>
         {cardsData.map((item) => {
           return (
             <>
@@ -45,12 +48,14 @@ export default function ProductCard() {
                    </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small">Add to cart</Button>
+                  <Button size="small" variant="contained" color="success">Add to cart</Button>
                 </CardActions>
               </Card>
               </>
         )}
           )}
 </Grid>
+</Grid>
+</>
   )
 }
