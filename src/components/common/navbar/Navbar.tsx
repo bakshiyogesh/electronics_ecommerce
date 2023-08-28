@@ -49,7 +49,7 @@ const NavBar:FC=()=>{
                 key={page.btnName}
                 sx={{ my: 2, color: 'white', display: 'block',":hover":'#51E1ED'}}
               >
-                <Link to={page.btnLink} color='red'>{page.btnName}</Link>
+                <Link to={page.btnLink} style={{textDecoration:'none',color:'whitesmoke'}} color='red'>{page.btnName}</Link>
               </Button>
             ))}
           </Box>

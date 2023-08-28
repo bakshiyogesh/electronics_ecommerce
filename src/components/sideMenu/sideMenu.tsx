@@ -22,13 +22,12 @@ const SideMenuBar: FC = () => {
         </Typography>
         <List  sx={{
         maxWidth: 320,alignItems:'center'
-        // '--ListItem-minHeight': '32px',
       }}>
           <ListItem  >
             <ListItemContent>
             {categoryButton.map((element)=>{
                 return(
-                    <ListItemButton>
+                    <ListItemButton onClick={()=>{console.log('seeing in the console')}}>
                         <ListItemDecorator>
                         {element}< KeyboardArrowDown/>
                         </ListItemDecorator>

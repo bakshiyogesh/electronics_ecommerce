@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import { Grid, Button} from "@mui/material";
 import SideMenuBar from "../../sideMenu/sideMenu";
 
-    const cardsData=[
+   export const cardsData=[
    {imgSRC:'/Apples.webp',name:'Apples',price:200,category:'fruit'},
    {imgSRC:'/BabySpinach.webp',name:'BabySpinach',price:100,category:'vegetable'},
    {imgSRC:"/blueberries.webp",name:'BlueBerries',price:150,category:'fruit'},
@@ -33,7 +33,7 @@ export default function ProductCard() {
         {cardsData.map((item) => {
           return (
             <>
-              <Card sx={{ width: "30vw", height: "auto" }}>
+              <Card sx={{ width: "30vw", height: "auto" }} key={item.name}>
                 <CardContent>
                   <CardMedia
                     sx={{ height: "200px" }}
