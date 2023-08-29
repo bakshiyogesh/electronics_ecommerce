@@ -15,7 +15,7 @@ const Footer:FC=()=>{
                 color="white"
                 component="p"
                 >
-               © {currentYear} Vegetable&Fruits
+               © {currentYear} Vegies
                 </Typography>
            </Grid>
           </>
