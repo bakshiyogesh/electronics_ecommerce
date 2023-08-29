@@ -1,11 +1,10 @@
 import { Card, CardMedia, Grid } from '@mui/material';
-import React, { FC } from 'react';
-import ImageGallery from "react-image-gallery";
-// import AliceCarousel from 'react-alice-carousel';
+import { FC } from 'react';
+import SimpleImageSlider from "react-simple-image-slider";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import 'react-alice-carousel/lib/alice-carousel.css';
-const imageArray=['/bend-monitor.jpg','/cpu_fan.jpg','/digital-watch.jpg','gaming_laptop.jpg','/iphone.jpg','/headphones.jpg',"/wifi-extender.jpg",'/ram.jpg','/playstation.jpg']
+const imageArray=['/public/cash-delivery.webp','/public/free-delivery.webp','/public/gift-voucher.webp'];
 const ImageSlider:FC=()=>{
     const sliderImages:{original:string}[]=[
         {original:'/free-delivery.webp' },
@@ -15,10 +14,10 @@ const ImageSlider:FC=()=>{
     // const sliderImages=['/free-delivery.webp','/cash-delivery.webp','/gift-voucher.webp'];
     return(
     <>
-    <Grid container sx={{width:"100%"}}>
-        <Grid item> 
+    <Grid container sx={{width:"100vw",m:3}} justifyItems={"center"} flexDirection={'row'} flexWrap={'wrap'}>
+        <Grid item sx={{display:'flex'}} flexWrap={'wrap'} sm={12}> 
     {/* <AliceCarousel mouseTracking items={sliderImages}/> */}
-    <Slide>
+    {/* <Slide>
         {imageArray.map((element)=>{
             return(
             <>
@@ -32,7 +31,28 @@ const ImageSlider:FC=()=>{
             </>
             )
         })}
-    </Slide>
+    </Slide> */}
+    {/* <SimpleImageSlider
+        width={"700px"}
+        height={"350px"}
+        images={imageArray}
+        showBullets={true}
+        showNavs={false}
+        autoPlay={true}
+        autoPlayDelay={2.0}
+      /> */}
+      {imageArray.map((element)=>{
+            return(
+            <>
+            <Card sx={{ width: "auto", height: "auto" ,m:1}}>
+      <CardMedia
+        sx={{ height:250,objectFit:'cover',width:'100%'}}
+        image={element}
+        title="green iguana"
+      />
+      </Card> </>
+            )
+        })}
     </Grid>
     </Grid>
 

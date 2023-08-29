@@ -5,7 +5,7 @@ const Footer:FC=()=>{
     const fullyear=new Date().getFullYear;
     return(
           <>
-           <Grid sx={{ bgcolor: 'black', p: 6,width:'100%'}} component="footer">
+           <Grid sx={{ bgcolor: 'black', p: 6,width:'100vw'}} component="footer">
                 <Typography variant="h6" align="center" gutterBottom>
                 </Typography>
                 <Typography

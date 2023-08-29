@@ -13,8 +13,8 @@ const HomePage:FC=()=>{
 <>
   <NavBar/>
   <ProductContainer/>
-  <ProductCard />
   <ImageSlider/>
+  <ProductCard />
   <Footer/>
 </>
  )
