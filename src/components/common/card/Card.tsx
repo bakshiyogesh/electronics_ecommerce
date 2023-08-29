@@ -5,6 +5,7 @@ import CardActions from "@mui/material/CardActions";
 import Typography from "@mui/material/Typography";
 import { Grid, Button} from "@mui/material";
 import SideMenuBar from "../../sideMenu/sideMenu";
+import { productData } from "../../../interfaces/interface";
 
    export const cardsData=[
    {imgSRC:'/Apples.webp',name:'Apples',price:200,category:'fruit'},
@@ -24,13 +25,13 @@ import SideMenuBar from "../../sideMenu/sideMenu";
    {imgSRC:'/RedCherries.webp',name:"RedCherries",price:150,category:'vegetable'},
    {imgSRC:'/FrenchGreenBeans.webp',name:'FrenchGreenBeans',price:230,category:'vegetable'}
      ];
-export default function ProductCard() {
+export default function ProductCard({categoryData:productData}) {
   return (
 <>
 <Grid container component={'section'}>
   <SideMenuBar/>
 <Grid container sx={{ gap: 5, mt: 10,width:'70%'}} flexWrap={"wrap"} justifyContent={'flex-end'} component={"section"}>
-        {cardsData.map((item) => {
+        { Array.isArray(categoryData.)&&categoryData.map((item:productData) => {
           return (
             <>
               <Card sx={{ width: "30vw", height: "auto" }} key={item.name}>

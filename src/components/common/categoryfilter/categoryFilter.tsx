@@ -1,11 +1,14 @@
-
+import ProductCard, { cardsData } from "../card/Card";
 const categoryFilter=(element:string)=>{
-      console.log(element);
       if(element==='Vegetables'){
-        console.log('vegies')
+        // console.log('vegies')
+         const vegiesData=cardsData.filter((cardData)=>cardData.category==="vegetable");
+         console.log(vegiesData);
+         <ProductCard categoryData={vegiesData}/>
       }
       else{
-        console.log('fruits');
+        const fruitsData=cardsData.filter((cardData)=>cardData.category==="fruit");
+        console.log(fruitsData);
       }
 
 }
