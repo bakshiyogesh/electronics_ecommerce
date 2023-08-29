@@ -2,7 +2,8 @@ import { Grid, Typography } from "@mui/material";
 import { FC } from "react";
 
 const Footer:FC=()=>{
-    const fullyear=new Date().getFullYear;
+    const todayDate:Date=new Date();
+    const currentYear:number=todayDate.getFullYear();
     return(
           <>
            <Grid sx={{ bgcolor: 'black', p: 6,width:'100vw'}} component="footer">
@@ -14,7 +15,7 @@ const Footer:FC=()=>{
                 color="white"
                 component="p"
                 >
-               © 2023 Vegetable&Fruits
+               © {currentYear} Vegetable&Fruits
                 </Typography>
            </Grid>
           </>

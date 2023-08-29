@@ -1,16 +1,9 @@
 import { Card, CardMedia, Grid } from '@mui/material';
 import { FC } from 'react';
-import SimpleImageSlider from "react-simple-image-slider";
-import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import 'react-alice-carousel/lib/alice-carousel.css';
-const imageArray=['/public/cash-delivery.webp','/public/free-delivery.webp','/public/gift-voucher.webp'];
+const imageArray:string[]=['/public/cash-delivery.webp','/public/free-delivery.webp','/public/gift-voucher.webp'];
 const ImageSlider:FC=()=>{
-    const sliderImages:{original:string}[]=[
-        {original:'/free-delivery.webp' },
-        {original:'/cash-delivery.webp'},
-        {original:'/gift-voucher.webp'}
-    ];
     // const sliderImages=['/free-delivery.webp','/cash-delivery.webp','/gift-voucher.webp'];
     return(
     <>
