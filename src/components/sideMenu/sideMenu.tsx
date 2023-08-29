@@ -7,8 +7,9 @@ import ListItemButton from '@mui/joy/ListItemButton';
 import ListItemDecorator from '@mui/joy/ListItemDecorator';
 import { KeyboardArrowDown } from "@mui/icons-material";
 import categoryFilter from "../common/categoryfilter/categoryFilter";
+import { categoryButton } from "../constants/constant";
 const SideMenuBar: FC = () => {
-    const categoryButton=['Vegetables','Fruits'];
+    
   return (
     <>
       <Grid
