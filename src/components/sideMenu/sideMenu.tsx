@@ -6,6 +6,7 @@ import ListItemContent from '@mui/joy/ListItemContent';
 import ListItemButton from '@mui/joy/ListItemButton';
 import ListItemDecorator from '@mui/joy/ListItemDecorator';
 import { KeyboardArrowDown } from "@mui/icons-material";
+import categoryFilter from "../common/categoryfilter/categoryFilter";
 const SideMenuBar: FC = () => {
     const categoryButton=['Vegetables','Fruits'];
   return (
@@ -27,7 +28,7 @@ const SideMenuBar: FC = () => {
             <ListItemContent>
             {categoryButton.map((element)=>{
                 return(
-                    <ListItemButton onClick={()=>{console.log('seeing in the console')}}>
+                    <ListItemButton onClick={()=>categoryFilter(element)}>
                         <ListItemDecorator>
                         {element}< KeyboardArrowDown/>
                         </ListItemDecorator>
