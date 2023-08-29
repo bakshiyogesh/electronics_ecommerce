@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,22 +12,6 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import NavBar from '../components/common/navbar/Navbar';
-
-function Copyright(props:any) {
-
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" sx={{ mt: 5 }} >
-      {'Copyright © '}
-      <Link color="inherit" href="#">
-        {props.value}
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
-// TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();
 
@@ -130,7 +113,6 @@ export default function SignUp() {
             </Grid>
           </Box>
         </Box>
-        <Copyright  value={"Vegies"}/>
       </Container>
     </ThemeProvider>
     </>

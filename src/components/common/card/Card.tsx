@@ -8,12 +8,12 @@ import SideMenuBar from "../../sideMenu/sideMenu";
 import { productData} from "../../../interfaces/interface";
 import { FC } from "react";
 interface productArray{
-  vegiesData:productData[]
+  props:productData[]
 }
 
- const ProductCard:FC<productArray> =({vegiesData})=> {
+ const ProductCard:FC<productArray> =({props})=> {
   // console.log("viewing in product card filter", productData);
-  console.log('vegiesData',vegiesData.map((item)=>item.category));
+  // console.log('props',props.map((item)=>item.category));
   
   return (
     <>
@@ -26,8 +26,8 @@ interface productArray{
           justifyContent={"flex-end"}
           component={"section"}
         >
-          {Array.isArray(vegiesData)&&
-            vegiesData.map((item) => {
+          {Array.isArray(props)&&
+            props.map((item) => {
               return (
                 <>
                   <Card sx={{ width: "30vw", height: "auto" }} key={item.name}>
@@ -36,6 +36,7 @@ interface productArray{
                         sx={{ height: "200px" }}
                         image={item.imgSRC}
                         title="green iguana"
+                        key={item.name}
                       />
                       <Typography variant="subtitle2" color="text.secondary">
                         ₹{item.price}

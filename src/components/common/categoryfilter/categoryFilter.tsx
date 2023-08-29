@@ -7,14 +7,14 @@ const categoryFilter = (element: string) => {
       (cardData: { category: string; }) => cardData.category === "vegetable"
     );
     // console.log("vegies");
-    console.log(vegiesData);
-    <ProductCard vegiesData={vegiesData} />;
+    // console.log(vegiesData);
+    <ProductCard props={vegiesData}/>;
   } else {
-    const vegiesData:productData[] = productsData.filter(
+    const fruitsData:productData[] = productsData.filter(
       (cardData: { category: string; }) => cardData.category === "fruit"
     );
-    console.log(vegiesData);
-    <ProductCard vegiesData={vegiesData}/>; 
+    // console.log(vegiesData);
+    <ProductCard props={fruitsData}/>; 
   }
 };
 export default categoryFilter;

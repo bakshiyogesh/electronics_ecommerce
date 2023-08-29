@@ -29,7 +29,7 @@ const SideMenuBar: FC = () => {
             <ListItemContent>
             {categoryButton.map((element)=>{
                 return(
-                    <ListItemButton onClick={()=>categoryFilter(element)}>
+                    <ListItemButton onClick={()=>categoryFilter(element)} key={element}>
                         <ListItemDecorator>
                         {element}< KeyboardArrowDown/>
                         </ListItemDecorator>
