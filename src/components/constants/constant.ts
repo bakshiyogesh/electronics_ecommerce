@@ -59,7 +59,7 @@ export const productsData:productData[] = [
       imgSRC: "/RedCherries.webp",
       name: "RedCherries",
       price: 150,
-      category: "vegetable",
+      category: "fruit",
     },
     {
       imgSRC: "/FrenchGreenBeans.webp",

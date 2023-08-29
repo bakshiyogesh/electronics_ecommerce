@@ -8,8 +8,15 @@ import ListItemDecorator from '@mui/joy/ListItemDecorator';
 import { KeyboardArrowDown } from "@mui/icons-material";
 import categoryFilter from "../common/categoryfilter/categoryFilter";
 import { categoryButton } from "../constants/constant";
-const SideMenuBar: FC = () => {
-    
+
+
+interface SideMenuProps {
+  setFiltered: any
+}
+
+
+const SideMenuBar: FC <SideMenuProps> = ({ setFiltered }) => {
+
   return (
     <>
       <Grid
@@ -29,7 +36,7 @@ const SideMenuBar: FC = () => {
             <ListItemContent>
             {categoryButton.map((element)=>{
                 return(
-                    <ListItemButton onClick={()=>categoryFilter(element)} key={element}>
+                    <ListItemButton onClick={()=>setFiltered(categoryFilter(element))} key={element}>
                         <ListItemDecorator>
                         {element}< KeyboardArrowDown/>
                         </ListItemDecorator>

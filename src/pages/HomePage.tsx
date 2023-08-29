@@ -15,7 +15,8 @@ const HomePage:FC=()=>{
   <NavBar/>
   <ProductContainer/>
   {/* <ImageSlider/> */}
-  <ProductCard props={productsData}/>
+  {/* <ProductCard props={productsData}/> */}
+  <ProductCard productsData={productsData} />
   <Footer/>
 </>
  )
