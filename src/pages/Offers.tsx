@@ -15,7 +15,7 @@ const Offer: FC = () => {
         {offerArray.map((item) => {
           return (
             <>
-              <Card sx={{ width: "30vw", height: "auto" }}>
+              <Card sx={{ width: "30vw", height: "auto" }} key={item.coupon}>
                 <CardContent>
                   <CardMedia
                     sx={{ height: "200px" }}

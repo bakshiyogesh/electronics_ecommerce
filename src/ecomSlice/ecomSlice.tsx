@@ -12,7 +12,9 @@ export const ecomSlice = createSlice({
   initialState,
   reducers: {
          addToCart:(state,action:PayloadAction<productData>)=>{
+            console.log("action",action)
             const itemInCart = state.cardData.find((item) => item.id === action.payload.id);
+            console.log("itemINCart",itemInCart)
             if(itemInCart){
                 itemInCart.count++;
                 itemInCart

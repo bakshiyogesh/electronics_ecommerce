@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import ecomSliceReducer from "../ecomSlice/ecomSlice";
 const store = configureStore({
-  reducer: {
+  reducer: {    
     ecommerce: ecomSliceReducer,
   },
 });
