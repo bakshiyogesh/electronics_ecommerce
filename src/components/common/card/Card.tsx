@@ -13,13 +13,8 @@ interface productArray{
 }
 
  const ProductCard:FC<productArray> =({productsData})=> {
-  // console.log("viewing in product card filter", productData);
-  // console.log('props',props.map((item)=>item.category));
-
   const [filteredList, setFiltered] = React.useState< Array<productsData> >([]);
-  
-  
-  
+    
   return (
     <>
     <Button onClick={()=>{setFiltered(productsData)}} size="small">View All</Button>
