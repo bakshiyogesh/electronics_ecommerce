@@ -8,16 +8,17 @@ const initialState:itemData={
     cardData:[],
 }
 export const ecomSlice = createSlice({
-  name: "ecomSlice",
+  name: "ecommerce",
   initialState,
   reducers: {
          addToCart:(state,action:PayloadAction<productData>)=>{
             const itemInCart = state.cardData.find((item) => item.id === action.payload.id);
             if(itemInCart){
                 itemInCart.count++;
+                itemInCart
             }
             else{
-                state.cardData.push({...action.payload,count:1})
+                state.cardData.push(action.payload);
             }
          },
          removeFromCart:(state,action:PayloadAction<productData>)=>{
@@ -41,3 +42,4 @@ export const ecomSlice = createSlice({
   },
 });
 export const {addToCart,removeFromCart,incremenQuantity,decremenQuantity}=ecomSlice.actions;
+export default ecomSlice.reducer;

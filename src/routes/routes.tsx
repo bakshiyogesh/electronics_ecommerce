@@ -3,6 +3,7 @@ import HomePage from "../pages/HomePage";
 import ErrorPage from "../pages/ErrorPage";
 import Offer from "../pages/Offers";
 import SignUp from "../pages/SignUP";
+import Cart from "../pages/cart";
 
 function Routing() {
     return (
@@ -11,6 +12,7 @@ function Routing() {
           <Route path="/" element={<HomePage/>}/>
           <Route path="/offers" element={<Offer/>}/>
           <Route path="/signup" element={<SignUp/>}/>
+          <Route path="/cart" element={<Cart/>}/>
           <Route path="*" element={<ErrorPage/>}/>
         </Routes>
       </BrowserRouter>

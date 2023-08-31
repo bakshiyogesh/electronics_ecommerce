@@ -8,13 +8,15 @@ import SideMenuBar from "../../sideMenu/sideMenu";
 import { productData} from "../../../interfaces/interface";
 import { FC } from "react";
 import React from "react";
+import { addToCart } from "../../../ecomSlice/ecomSlice";
+import { useDispatch } from "react-redux";
 interface productArray{
   productsData:productData[]
 }
 
  const ProductCard:FC<productArray> =({productsData})=> {
-  const [filteredList, setFiltered] = React.useState< Array<productsData> >([]);
-
+  const [filteredList, setFiltered] = React.useState<productData[]>([]);
+  const dispatch=useDispatch();
   return (
     <>
       <Grid container component={"section"}>
@@ -44,7 +46,7 @@ interface productArray{
                       <Typography variant="subtitle2">{item.name}</Typography>
                     </CardContent>
                     <CardActions>
-                      <Button size="small" variant="contained" color="success">
+                      <Button size="small" variant="contained" color="success" onClick={()=>dispatch(addToCart)}>
                         Add to cart
                       </Button>
                     </CardActions>
