@@ -14,10 +14,9 @@ interface productArray{
 
  const ProductCard:FC<productArray> =({productsData})=> {
   const [filteredList, setFiltered] = React.useState< Array<productsData> >([]);
-    
+
   return (
     <>
-    <Button onClick={()=>{setFiltered(productsData)}} size="small">View All</Button>
       <Grid container component={"section"}>
         <SideMenuBar setFiltered={setFiltered} />
         <Grid

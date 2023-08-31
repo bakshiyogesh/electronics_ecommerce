@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import { FC } from "react";
 import List from '@mui/joy/List';
 import ListItem from '@mui/joy/ListItem';
@@ -7,7 +7,7 @@ import ListItemButton from '@mui/joy/ListItemButton';
 import ListItemDecorator from '@mui/joy/ListItemDecorator';
 import { KeyboardArrowDown } from "@mui/icons-material";
 import categoryFilter from "../common/categoryfilter/categoryFilter";
-import { categoryButton } from "../constants/constant";
+import { categoryButton, productsData } from "../constants/constant";
 
 
 interface SideMenuProps {
@@ -34,6 +34,7 @@ const SideMenuBar: FC <SideMenuProps> = ({ setFiltered }) => {
       }}>
           <ListItem  >
             <ListItemContent>
+            <Button onClick={()=>{setFiltered(productsData)}} size="small">View All</Button>
             {categoryButton.map((element)=>{
                 return(
                     <ListItemButton onClick={()=>setFiltered(categoryFilter(element))} key={element}>
