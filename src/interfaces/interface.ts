@@ -1,4 +1,5 @@
- export interface productData{  
+ export interface productData{ 
+    id:number 
     imgSRC:string,
     name:string,
     price:number,

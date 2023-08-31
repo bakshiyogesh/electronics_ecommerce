@@ -6,7 +6,7 @@ const Footer:FC=()=>{
     const currentYear:number=todayDate.getFullYear();
     return(
           <>
-           <Grid sx={{ bgcolor: 'black', p: 6,width:'100vw'}} component="footer">
+           <Grid sx={{ bgcolor: 'black', p: 6,width:'100vw',mt:1}} component="footer">
                 <Typography variant="h6" align="center" gutterBottom>
                 </Typography>
                 <Typography

@@ -16,14 +16,14 @@ interface productArray{
   // console.log("viewing in product card filter", productData);
   // console.log('props',props.map((item)=>item.category));
 
-  const [filteredList, setFiltered] = React.useState< Array<productsData> >([]);
+  const [filteredList, setFiltered] = React.useState<productsData[]>([]);
   
   
   
   return (
     <>
-    <Button onClick={()=>{setFiltered(productsData)}} size="small">View All</Button>
-      <Grid container component={"section"}>
+        {/* <Button onClick={()=>{setFiltered(productsData)}} size="small">View All</Button> */}
+      <Grid container component={"section"} flex={"wrap"}>
         <SideMenuBar setFiltered={setFiltered} />
         <Grid
           container
@@ -31,6 +31,7 @@ interface productArray{
           flexWrap={"wrap"}
           justifyContent={"flex-end"}
           component={"section"}
+          xs={12}
         >
           { filteredList.length === 0 && Array.isArray(productsData)&&
             productsData.map((item) => {
