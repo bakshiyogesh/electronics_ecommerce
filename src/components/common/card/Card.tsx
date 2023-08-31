@@ -15,7 +15,7 @@ interface productArray{
 }
 
  const ProductCard:FC<productArray> =({productsData})=> {
-  const [filteredList, setFiltered] = React.useState<productData[]>([]);
+  const [filteredList, setFiltered] = React.useState<Array<productData>>([]);
   const dispatch=useDispatch();
   return (
     <>
@@ -46,7 +46,7 @@ interface productArray{
                       <Typography variant="subtitle2">{item.name}</Typography>
                     </CardContent>
                     <CardActions>
-                      <Button size="small" variant="contained" color="success" onClick={()=>dispatch(addToCart)}>
+                      <Button size="small" variant="contained" color="success" onClick={()=>dispatch(addToCart(item))}>
                         Add to cart
                       </Button>
                     </CardActions>
@@ -74,7 +74,7 @@ interface productArray{
                         <Typography variant="subtitle2">{item.name}</Typography>
                       </CardContent>
                       <CardActions>
-                        <Button size="small" variant="contained" color="success">
+                        <Button size="small" variant="contained" color="success" onClick={()=>dispatch(addToCart(item))}>
                           Add to cart
                         </Button>
                       </CardActions>

@@ -31,11 +31,11 @@ export const ecomSlice = createSlice({
          },
          decremenQuantity:(state,action:PayloadAction<productData>)=>{
             const itemInCart = state.cardData.find((item) => item.id === action.payload.id);
-            if(itemInCart?.count!=1){
+            if(itemInCart!.count!==1){
              itemInCart!.count=1;
             }
             else{
-                itemInCart.count--;
+                itemInCart!.count--;
             }
          }
 
