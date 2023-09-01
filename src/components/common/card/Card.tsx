@@ -30,7 +30,6 @@ interface productArray{
         >
           { filteredList.length === 0 && Array.isArray(productsData)&&
             productsData.map((item) => {
-              console.log("data item:",item);
   
               return (
                 <>
@@ -48,7 +47,7 @@ interface productArray{
                       <Typography variant="subtitle2">{item.name}</Typography>
                     </CardContent>
                     <CardActions>
-                      <Button size="small" variant="contained" color="success" onClick={()=>console.log("dispath",dispatch(addToCart(item)))}>
+                      <Button size="small" variant="contained" color="success" onClick={()=>dispatch(addToCart(item))}>
                         Add to cart
                       </Button>
                     </CardActions>
