@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import ecomSliceReducer from "../ecomSlice/ecomSlice";
-const store = configureStore({
-  reducer: {    
-    ecommerce: ecomSliceReducer,
+import ecomReducer from "../ecomSlice/ecomSlice";
+
+
+const store=configureStore({
+  reducer: {
+    ecommerce:ecomReducer
   },
-});
+})
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

@@ -20,7 +20,8 @@ export const ecomSlice = createSlice({
                 itemInCart
             }
             else{
-                state.cardData.push(action.payload);
+                
+              state.cardData.push(action.payload);
             }
          },
          removeFromCart:(state,action:PayloadAction<productData>)=>{
